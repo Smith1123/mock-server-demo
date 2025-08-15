@@ -1,0 +1,11 @@
+version: "3.9"
+
+services:
+  mockserver:
+    image: mockserver/mockserver:5.15.0
+    container_name: mockserver-demo
+    restart: unless-stopped
+    ports:
+      - "1080:1080"
+    environment:
+      MOCKSERVER_CORS_ALLOW_ORIGIN: "*"
