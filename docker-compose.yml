@@ -9,3 +9,9 @@ services:
       - "1080:1080"
     environment:
       MOCKSERVER_CORS_ALLOW_ORIGIN: "*"
+    networks:
+      - localnet
+
+networks:
+  localnet:
+    name: localnet
